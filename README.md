@@ -18,6 +18,7 @@ While this option doesn't use much in the way of CS theory, it certainly makes y
   * When dealing with `AND` queries, we just sum up relevance for each term. We're programmers so we always think of the worst case...how could that not be the correct solution? What can you do to fix some of those problems?
   * Currently you are just doing a strict term count. In the philosophy lab, we built out the idea of pages linking to each other. Create a ranker that ranks pages by how often they are linked to. Combine this with term counts to try and get the most relevant pages for that specific term!
   * You can also easily start analyzing the images that are available on web pages. Writing your own computer vision is a bit outside of the scope of this program, you can use external APIs like [Google Vision](https://cloud.google.com/vision/) to get started.
+  * Let's bring context into our term counting. A term in a `h1` should matter much more than just some term in a `p` tag. Use the different HTML tags to apply different weightings to the different results.
 
 ### Faster Search Results
 
