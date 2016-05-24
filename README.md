@@ -29,9 +29,13 @@ While this option doesn't use much in the way of CS theory, it certainly makes y
   **Guiding students through levels of complexity is important here. First just have them build a basic PageRank using link counting. Should be similar to the term counting algorithms. Make sure to point out how do they want to store the data? How do they want to factor in the idea of the same page linking to another multiple times? Is that weighted differently? Once they finish this, having them start to think of second order page ranking. If a page with a high page rank, links heavily to another that should be worth more than if a low page rank links. There is a ton for students to do here**
 
   * You can also easily start analyzing the images that are available on web pages. Writing your own computer vision is a bit outside of the scope of this program, you can use external APIs like [Google Vision](https://cloud.google.com/vision/) to get started.
-  * Let's bring context into our term counting. A term in a `h1` should matter much more than just some term in a `p` tag. Use the different HTML tags to apply different weightings to the different results.
 
   **Google Computer Vision only give 1,000 connections a month which isn't a ton, but it's cheap to get more. There are other APIs as well. [Microsoft](https://www.microsoft.com/cognitive-services/en-us/computer-vision-api) has one where you'd get 5,000 transactions per month**
+
+  * Let's bring context into our term counting. A term in a `h1` should matter much more than just some term in a `p` tag. Use the different HTML tags to apply different weightings to the different results.
+
+  **They will have to use JSoup (the HTML parser we provide them) to figure out what tag the term they are looking at is currently on. JSoup has some very Javascript like features to figure out what tags the current element is sitting in. Another concern students should be focused on is how are you storing this data? In the effort to just go up levels of complexity, the ismplest way is to just have a look-up of different values to add to the "count" given the different surrounding tags. This leads to an interesting OO design problem. How can oyu make that look up table in a modular way?**
+
 
 ### Faster Search Results
 
